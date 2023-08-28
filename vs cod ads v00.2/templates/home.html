@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to TaskW Reward</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('withdraw') }}">Withdraw</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home Page</h2>
+        <p>Click the button below to start watching ads and earning money!</p>
+        <a href="{{ url_for('dashboard') }}" class="start-button">Start Watching Ads</a>
+    </main>
+
+    <footer>
+        &copy; 2023 TaskW Reward. All rights reserved.
+    </footer>
+    <!-- ... (previous code) ... -->
+
+<main>
+    <h2>Home Page</h2>
+    <p>Click the button below to start watching ads and earning money!</p>
+    <a href="{{ url_for('dashboard') }}" class="start-button">Start Watching Ads</a>
+    <div class="adsense-container">
+        <!-- Add your AdSense code here -->
+        <!-- Replace the placeholder with your actual AdSense code -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-YOUR-ADSENSE-CLIENT-ID"
+            data-ad-slot="YOUR-ADSENSE-SLOT-ID"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</main>
+
+<!-- ... (remaining code) ... -->
+
+</body>
+</html>

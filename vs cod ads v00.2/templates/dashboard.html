@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - TaskW Reward</title>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <!-- Display user's information and earnings here -->
+    <p>Total Earnings: ${{ total_earnings }}</p>
+    <a href="{{ url_for('view_ads') }}" class="start-button">View Ads</a>
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="dashboard-container">
+        <h2>Hello, {{ user.email }}</h2>
+        <p>Your total earnings: ${{ earnings }}</p>
+        <a href="{{ url_for('withdraw') }}">Withdraw Earnings</a>
+    </div>
+    {% endblock %}
+    
+</body>
+</html>

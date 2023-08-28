@@ -1,0 +1,49 @@
+/* Your CSS styles go here */
+
+/* Example styles for the start button */
+.start-button {
+    background-color: #FF0000; /* Red color */
+    color: #FFFFFF; /* White color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Other styles for your website */
+/* ... */
+/* ... (previous code) ... */
+
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ... (remaining code) ... */
+/* ... (previous code) ... */
+
+/* Add styles for profile and withdrawal pages */
+.profile-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ... (remaining code) ... */

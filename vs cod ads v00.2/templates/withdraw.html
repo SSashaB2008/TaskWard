@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+
+
+</head>
+<body>
+ <!-- ... (previous code) ... -->
+
+<main>
+    <h2>Withdraw Earnings</h2>
+    <p>Withdraw your earnings to your PayPal account.</p>
+    <form action="{{ url_for('withdraw') }}" method="post">
+        <label for="withdraw_amount">Amount to Withdraw:</label>
+        <input type="number" id="withdraw_amount" name="withdraw_amount" required>
+        <button type="submit" class="withdraw-button">Withdraw</button>
+    </form>
+</main>
+
+<!-- ... (remaining code) ... -->
+{% extends "base.html" %}
+{% block content %}
+<div class="withdraw-container">
+    <h2>Withdraw Earnings</h2>
+    <p>Your available earnings: ${{ earnings }}</p>
+    <form method="POST" action="{{ url_for('withdraw') }}">
+        <label for="paypal_email">PayPal Email:</label>
+        <input type="email" id="paypal_email" name="paypal_email" required>
+        <button type="submit">Withdraw</button>
+    </form>
+</div>
+{% endblock %}
+
+    
+</body>

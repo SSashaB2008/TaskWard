@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile - TaskW Reward</title>
+</head>
+<body>
+    <h1>Your Profile</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Age: {{ user.age }}</p>
+    <p>Gender: {{ user.gender }}</p>
+    <a href="{{ url_for('withdraw') }}">Withdraw Earnings</a>
+<!-- ... (previous code) ... -->
+
+<main>
+    <h2>Profile</h2>
+    <p>Manage your profile information here.</p>
+    <form action="{{ url_for('update_profile') }}" method="post">
+        <label for="paypal_email">PayPal Email:</label>
+        <input type="email" id="paypal_email" name="paypal_email" required>
+        <button type="submit" class="update-profile-button">Update Profile</button>
+    </form>
+</main>
+
+<!-- ... (remaining code) ... -->
+{% extends "base.html" %}
+{% block content %}
+<div class="profile-container">
+    <h2>Profile</h2>
+    <form method="POST" action="{{ url_for('profile') }}">
+        <label for="paypal_email">PayPal Email:</label>
+        <input type="email" id="paypal_email" name="paypal_email" value="{{ user.paypal_email }}" required>
+        <button type="submit">Update</button>
+    </form>
+</div>
+{% endblock %}
+
+
+</body>
+</html>
